@@ -1,15 +1,22 @@
 <div class="timeline-<%= @portlet.id %>">
+	
 	<h1>Follow Me</h1>
+	
 	<h2>@<%= h @items.first.user.screen_name %></h2>
+	
 	<h4>Location: <%= h @items.first.user.location %></h4>
 	<h4>Description: <%= h @items.first.user.description %></h4>
-	<%= image_tag @items.firs.user.profile_image_url %>
 	
+	<p>
+		<%= image_tag @items.first.user.profile_image_url %>
+	</p>
+	
+	<ul>
 	<% @items.each do |item| %>
-		<p>
-			<div class="description"><%= item.text %>
- 				<span class="quiet"><%= time_ago_in_words(item.created_at) %></span>
-			</div>
-   		</p>
+	
+		<li><%= item.text %> <small><%= time_ago_in_words(item.created_at) %></small></li>
+		
  	<% end %>
+	</ul>
+
 </div>
