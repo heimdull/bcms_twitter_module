@@ -1,2 +1,10 @@
-<%= f.cms_text_field :name %>
+<%= f.cms_text_field :name, :instructions => 'Add a useful name like "Twitter timeline: username"' %>
+<%= f.cms_text_field :username, :instructions => 'This is your Twitter username' %>
+<%= f.cms_drop_down :limit, 
+  [
+    ['Unlimited','0'],['1','1'],['2','2'],['3','3'],['4','4'],['5','5'],['6','6'],['7','7'],['8','8'],['9','9'],
+    ['10','10'],['11','11'],['12','12'],['13','13'],['14','14'],['15','15'],['16','16'],['17','17'],['18','18'],['19','19'],
+    ['20','20']
+], :instructions => 'The timeline is available in the @items variable.'
+%>
 <%= f.cms_template_editor :template %>

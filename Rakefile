@@ -12,7 +12,7 @@ require 'tasks/rails'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
-    gemspec.name = "bcms_twitter"
+    gemspec.name = "bcms_twitter_module"
     gemspec.summary = "Twitter in BrowserCMS"
     gemspec.description = "A BrowserCMS module which fetches Twitter timelines"
     gemspec.email = "freddy@zerolimitstech.com"
