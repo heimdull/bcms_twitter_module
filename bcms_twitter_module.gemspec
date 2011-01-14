@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{bcms_twitter_module}
-  s.version = "1.1.0"
+  s.version = "1.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Freddy Andersen"]
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.email = %q{freddy@zerolimitstech.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
-     "README"
+     "README.markdown"
   ]
   s.files = [
     "app/controllers/application_controller.rb",
