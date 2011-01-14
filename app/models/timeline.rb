@@ -29,7 +29,7 @@ class Timeline < ActiveRecord::Base
       update_attribute(:expires_at, Time.now.utc + TTL)
       
       Timeout.timeout(TIMEOUT) {
-        content = Twitter.timeline(self.username)[0..(tweet_amount.to_i - 1)]
+        content = Twitter.user_timeline(self.username)[0..(tweet_amount.to_i - 1)]
       }
             
     rescue SocketError, Timeout::Error, Twitter::General => exception
