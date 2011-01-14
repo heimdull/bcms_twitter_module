@@ -25,6 +25,7 @@ begin
     gemspec.files -= Dir["db/migrate/*_load_seed_data.rb"]
     gemspec.files += Dir["rails/init.rb"]
     gemspec.add_dependency('twitter')
+    Jeweler::GemcutterTasks.new
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
