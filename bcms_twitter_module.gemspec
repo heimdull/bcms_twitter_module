@@ -25,6 +25,9 @@ Gem::Specification.new do |s|
      "app/views/layouts/templates/default.html.erb",
      "app/views/portlets/twitter_user_timeline/_form.html.erb",
      "app/views/portlets/twitter_user_timeline/render.html.erb",
+     "db/migrate/20080815014337_browsercms_3_0_0.rb",
+     "db/migrate/20081114172307_load_seed_data.rb",
+     "db/migrate/20091109175123_browsercms_3_0_5.rb",
      "db/migrate/20101029045339_create_timelines.rb",
      "lib/bcms_twitter_module.rb",
      "lib/bcms_twitter_module/routes.rb",
@@ -46,11 +49,11 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<twitter>, [">= 0"])
+      s.add_runtime_dependency(%q<twitter>, [">= 1.1.0"])
     else
-      s.add_dependency(%q<twitter>, [">= 0"])
+      s.add_dependency(%q<twitter>, [">= 1.1.0"])
     end
   else
-    s.add_dependency(%q<twitter>, [">= 0"])
+    s.add_dependency(%q<twitter>, [">= 1.1.0"])
   end
 end

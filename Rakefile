@@ -21,10 +21,8 @@ begin
     gemspec.files = Dir["app/**/*"]
     gemspec.files += Dir["lib/**/*"]
     gemspec.files += Dir["db/migrate/*.rb"]
-    gemspec.files -= Dir["db/migrate/*_browsercms_*.rb"]
-    gemspec.files -= Dir["db/migrate/*_load_seed_data.rb"]
     gemspec.files += Dir["rails/init.rb"]
-    gemspec.add_dependency('twitter')
+    gemspec.add_dependency('twitter', '>= 1.1.0')
     Jeweler::GemcutterTasks.new
   end
 rescue LoadError
